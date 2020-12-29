@@ -1,11 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h1>12312</h1>
-  <div>
-    <button v-for="(item,index) in checkItem" :key="index" @click="selectItem(index)">{{item}}:{{index}}</button>
-  </div>
-  <div>按下了{{selectNum}}</div>
-
+  <router-view/>
 </template>
 
 <script lang="ts">
