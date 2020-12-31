@@ -1,4 +1,5 @@
 <template>
+    <tabbarHead></tabbarHead>
     <router-view/>
     <van-tabbar v-model="active"  @change="onChange">
         <van-tabbar-item icon="home-o">首页</van-tabbar-item>
@@ -8,27 +9,26 @@
     </van-tabbar>
 </template>
 
-<script>
+<script lang="ts">
 import {toRefs, ref,reactive,onBeforeMount,onMounted,onBeforeUpdate,onUpdated} from "vue";
 import { useRouter } from 'vue-router'
+import tabbarHead from '../components/tabbarHead.vue'
+interface dataProp{
+    
+}
 export default {
     name:"app",
+    components:{tabbarHead},
     setup(){
     const router = useRouter()
     const active = ref(0);
-    const onChange = (index)=>{
+    const onChange = (index:number)=>{
         console.log('index',index)
         console.log('router',router)
-        if(index == 0){
-            router.push('/home/index')
-        } else if(index == 1){
-            router.push('/home/search')
-        } else if(index == 2){
-            router.push('/home/share')
-        } else if(index == 3){
-            router.push('/home/setting')
-        }
-        // router.push('/home/test')
+        // 目标路由
+        let targetRouter = router.options.routes[1].path + '/'+ router.options.routes[1].children[index].path
+        console.log(targetRouter)
+        router.push(targetRouter)
     }
     return { active, onChange};
     }

@@ -1,7 +1,5 @@
 <template>
-    <div class="container">
-        index
-    </div>
+    <div>head</div>
 </template>
 
 <script>
@@ -13,6 +11,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
-}
 </style>

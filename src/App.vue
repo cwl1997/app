@@ -39,7 +39,7 @@
       // const girls = ref(['测试1','测试2','测试3']);
       // const selectNum = ref("")
       // const selectNumFun =(index:number)=>{
-      //   selectNum.value = girls.value[index]
+        // selectNum.value = girls.value[index]
       // }
       return {
         // girls,selectNum,selectNumFun
