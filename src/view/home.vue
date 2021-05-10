@@ -1,12 +1,14 @@
 <template>
-    <tabbarHead></tabbarHead>
-    <router-view/>
-    <van-tabbar v-model="active"  @change="onChange">
-        <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item icon="search">查询</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">分享</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">设置</van-tabbar-item>
-    </van-tabbar>
+    <div class="container">
+        <tabbarHead></tabbarHead>
+        <router-view/>
+        <van-tabbar v-model="active"  @change="onChange">
+            <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+            <van-tabbar-item icon="search">查询</van-tabbar-item>
+            <van-tabbar-item icon="friends-o">用户</van-tabbar-item>
+        </van-tabbar>
+    </div>
+    
 </template>
 
 <script lang="ts">
@@ -36,4 +38,5 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+
 </style>

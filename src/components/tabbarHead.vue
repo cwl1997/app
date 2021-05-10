@@ -1,5 +1,5 @@
 <template>
-    <div>head</div>
+    <div class="title">廖狗的剧本杀店</div>
 </template>
 
 <script>
@@ -11,4 +11,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title{
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    line-height: 50px;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
 </style>

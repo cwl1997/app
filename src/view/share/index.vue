@@ -1,5 +1,5 @@
 <template>
-    <div>share</div>
+    <div @click="add">share</div>
 </template>
 
 <script>
