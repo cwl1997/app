@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <tabbarHead class="head"></tabbarHead>
-    <router-view class="content" style="height: 100vh" />
-    <van-tabbar v-model="active" @change="onChange">
+    <router-view class="content" style="height: 100vh; margin-bottom: 50px" />
+    <!-- <van-tabbar v-model="active" @change="onChange">
       <van-tabbar-item icon="home-o">首页</van-tabbar-item>
       <van-tabbar-item icon="search">查询</van-tabbar-item>
       <van-tabbar-item icon="friends-o">用户</van-tabbar-item>
-    </van-tabbar>
+    </van-tabbar> -->
+    <tabbarFoot></tabbarFoot>
   </div>
 </template>
 
@@ -22,10 +23,11 @@ import {
 } from "vue";
 import { useRouter } from "vue-router";
 import tabbarHead from "../components/tabbarHead.vue";
+import tabbarFoot from "../components/wl-tabbar/index.vue";
 interface dataProp {}
 export default {
   name: "app",
-  components: { tabbarHead },
+  components: { tabbarHead, tabbarFoot },
   setup() {
     const router = useRouter();
     const active = ref(0);
@@ -40,7 +42,7 @@ export default {
       console.log(targetRouter);
       router.push(targetRouter);
     };
-    return { active, onChange };
+    return { active, onChange, router };
   },
 };
 </script>

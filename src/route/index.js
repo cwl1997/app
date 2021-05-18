@@ -22,19 +22,23 @@ const router = createRouter({
         children:[
           {
             path: 'index',
-            component: index
+            component: index,
+            name:'首页'
           },
           {
             path: 'search',
-            component: search
+            component: search,
+            name:'查询'
           },
           {
             path: 'share',
-            component: share
+            component: share,
+            name:'分享'
           },
           {
             path: 'setting',
-            component: setting
+            component: setting,
+            name:'用户'
           }
         ]
       }      

@@ -36,6 +36,7 @@ import {
 } from "vue";
 export default {
   name: "app",
+
   setup() {
     let age = ref(123);
     function test() {
